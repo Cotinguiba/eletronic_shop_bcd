@@ -55,6 +55,9 @@ Implementação de um **SGBD Relacional (MySQL)** com arquitetura de herança re
 * `cliente` (1) <----> (N) `venda` (1:N)
 * `venda` (1) <----> (N) `item_venda` <----> (1) `eletronico` (N:M)
 
+### Diagrama Entidade-Relacionamento (DER):
+![Modelo do Banco de Dados](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/main/Esquema%20do%20banco.png?raw=true)
+
 ---
 
 ## 5. Aplicação das Formas Normais (1FN a 4FN)
@@ -267,6 +270,7 @@ Por fim, acesse o Portal do Azure e navegue até a opção **Bancos de dados** d
 .
 ├── index.html                   # Front-end explicativo da atividade
 ├── README.md                    # Documentação detalhada da atividade
+├── Esquema do banco.png         # Diagrama do Modelo Entidade-Relacionamento (DER)
 ├── Passo a passo azure/         # Imagens do processo de configuração na Azure
 ├── DUMP AZURE/                  # Imagens do processo de exportação e importação do dump
 └── (scripts/dumps) .sql         # Scripts do Banco de Dados
