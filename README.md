@@ -2,7 +2,7 @@
 
 Este repositório contém a documentação completa, a modelagem lógica, os scripts SQL e o passo a passo de hospedagem em nuvem (Microsoft Azure) para o banco de dados da **Eletronics Shop**.
 
-🚀 **Link para o Deploy do Front-end:** *(Insira o link da página aqui assim que finalizar o deploy)*
+🚀 **Link para o Deploy do Front-end:** [https://eletronicshopbcd-g2u9.vercel.app/](https://eletronicshopbcd-g2u9.vercel.app/)
 
 ---
 
@@ -56,7 +56,7 @@ Implementação de um **SGBD Relacional (MySQL)** com arquitetura de herança re
 * `venda` (1) <----> (N) `item_venda` <----> (1) `eletronico` (N:M)
 
 ### Diagrama Entidade-Relacionamento (DER):
-![Modelo do Banco de Dados](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/main/Esquema%20do%20banco.png?raw=true)
+![Modelo do Banco de Dados](./Esquema%20do%20banco.png)
 
 ---
 
@@ -82,28 +82,28 @@ Abaixo está o procedimento ilustrado passo a passo para o provisionamento e con
 ### Passo 1: Acessar o Serviço de Servidores Flexíveis do Azure para MySQL
 Acesse o Portal do Azure, navegue até a seção de **Servidores flexíveis do Banco de Dados do Azure para MySQL** e clique no botão **+ Criar** para iniciar o provisionamento da nova instância.
 
-![Passo 1 - Tela de Criação](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/main/Passo%20a%20passo%20azure/1%20-Tela%20de%20Cria%C3%A7%C3%A3o.png?raw=true)
+![Passo 1 - Tela de Criação](./Passo%20a%20passo%20azure/1%20-Tela%20de%20Cria%C3%A7%C3%A3o.png)
 
 ---
 
 ### Passo 2: Selecionar o Tipo de Implantação (Criação Avançada)
 Na tela de seleção do modelo de implantação, selecione a opção **Servidor flexível** e clique no botão **Criação Avançada** para ter controle total sobre o grupo de recursos, credenciais e regras de rede.
 
-![Passo 2 - Seleção de Criação Avançada](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/2%20-Sele%C3%A7%C3%A3o%20de%20cria%C3%A7%C3%A3o%20avan%C3%A7ada.png?raw=true)
+![Passo 2 - Seleção de Criação Avançada](./Passo%20a%20passo%20azure/2%20-Sele%C3%A7%C3%A3o%20de%20cria%C3%A7%C3%A3o%20avan%C3%A7ada.png)
 
 ---
 
 ### Passo 3: Navegação pelas Abas de Configuração
 O formulário de criação é estruturado nas abas: **Básico**, **Rede**, **Configuração adicional**, **Rótulos** e **Revisar + criar**.
 
-![Passo 3 - Abas de Configuração](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/3%20-%20Abas%20de%20configura%C3%A7%C3%A3o.png?raw=true)
+![Passo 3 - Abas de Configuração](./Passo%20a%20passo%20azure/3%20-%20Abas%20de%20configura%C3%A7%C3%A3o.png)
 
 ---
 
 ### Passo 4: Configuração dos Detalhes do Projeto
 Na aba **Básico**, em *Detalhes do projeto*, selecione a sua **Assinatura** ativa (ex: `Azure subscription 1`) e defina ou crie o **Grupo de recursos** (`bcd_senai`).
 
-![Passo 4 - Detalhes do Projeto](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/4%20-%20Detalhes%20do%20projeto.png?raw=true)
+![Passo 4 - Detalhes do Projeto](./Passo%20a%20passo%20azure/4%20-%20Detalhes%20do%20projeto.png)
 
 ---
 
@@ -113,7 +113,7 @@ Preencha os parâmetros do banco de dados:
 * **Região:** `Brazil Southeast`
 * **Versão MySQL:** `8.4`
 
-![Passo 5 - Detalhes do Servidor](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/5%20-%20Detalhes%20do%20servidor.png?raw=true)
+![Passo 5 - Detalhes do Servidor](./Passo%20a%20passo%20azure/5%20-%20Detalhes%20do%20servidor.png)
 
 ---
 
@@ -123,14 +123,14 @@ Defina o porte e recurso de hardware da instância:
 * **Computação + armazenamento:** `Uso Geral, D2ds_v4` (2 vCores, 8 GiB RAM, 64 GiB de armazenamento)
 * **Zona de disponibilidade:** `Nenhuma preferência`
 
-![Passo 6 - Computação e Carga de Trabalho](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/6%20-%20Configura%C3%A7%C3%B5es%20de%20trabalho%2C%20computa%C3%A7%C3%A3o%20e%20zona.png?raw=true)
+![Passo 6 - Computação e Carga de Trabalho](./Passo%20a%20passo%20azure/6%20-%20Configura%C3%A7%C3%B5es%20de%20trabalho%2C%20computa%C3%A7%C3%A3o%20e%20zona.png)
 
 ---
 
 ### Passo 7: Configuração de Alta Disponibilidade
 Na seção *Alta disponibilidade*, selecione a opção **Desabilitado (SLA de 99,9%)** para otimizar os custos em ambiente de desenvolvimento.
 
-![Passo 7 - Disponibilidade](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/7%20-%20Disponibilidade.png?raw=true)
+![Passo 7 - Disponibilidade](./Passo%20a%20passo%20azure/7%20-%20Disponibilidade.png)
 
 ---
 
@@ -140,7 +140,7 @@ Na seção *Autenticação*, configure as permissões de logon do administrador:
 * **Logon do administrador:** `paulo_bcd_teste`
 * **Senha:** *(Definida e confirmada)*
 
-![Passo 8 - Autenticação](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/8%20-%20Autentica%C3%A7%C3%A3o.png?raw=true)
+![Passo 8 - Autenticação](./Passo%20a%20passo%20azure/8%20-%20Autentica%C3%A7%C3%A3o.png)
 
 ---
 
@@ -150,7 +150,7 @@ Na aba **Rede**, defina os parâmetros para acesso externo:
 * **Porta do banco de dados:** `3306`
 * **Acesso público:** Marque a opção `Permitir acesso público a este recurso pela Internet usando um endereço IP público`.
 
-![Passo 9 - Conectividade e Acesso](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/9%20-%20Conectividade%20e%20acesso.png?raw=true)
+![Passo 9 - Conectividade e Acesso](./Passo%20a%20passo%20azure/9%20-%20Conectividade%20e%20acesso.png)
 
 ---
 
@@ -159,14 +159,14 @@ Libere as conexões de entrada na porta `3306`:
 * Marque **"Permitir o acesso público de qualquer serviço do Azure de dentro do Azure para esse servidor"**.
 * Crie a regra de firewall (ex: `AllowAll`) autorizando o intervalo de IPs necessário para conexão remota.
 
-![Passo 10 - Regras de Firewall](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/9%20-%20Regras%20de%20firewall.png?raw=true)
+![Passo 10 - Regras de Firewall](./Passo%20a%20passo%20azure/9%20-%20Regras%20de%20firewall.png)
 
 ---
 
 ### Passo 11: Acompanhamento da Implantação
 Após validar e clicar em **Criar**, aguarde o provisionamento no Azure (`atividade4-bcd`). A tela exibirá o status da operação em andamento até a conclusão.
 
-![Passo 11 - Implantação em Andamento](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/11%20-%20Implanta%C3%A7%C3%A3o.png?raw=true)
+![Passo 11 - Implantação em Andamento](./Passo%20a%20passo%20azure/11%20-%20Implanta%C3%A7%C3%A3o.png)
 
 ---
 
@@ -174,7 +174,7 @@ Após validar e clicar em **Criar**, aguarde o provisionamento no Azure (`ativid
 
 A Azure disponibiliza o detalhamento financeiro estimado para a execução da instância MySQL na nuvem, calculado da seguinte forma:
 
-![Bônus - Calculadora de Preços](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/Passo%20a%20passo%20azure/Calculadora%20de%20pre%C3%A7os.png?raw=true)
+![Bônus - Calculadora de Preços](./Passo%20a%20passo%20azure/Calculadora%20de%20pre%C3%A7os.png)
 
 #### Composição do Custo Estimado (Total: USD 151.18 / mês):
 1. **Computação (USD 142.35/mês):** Referente a 2 vCores da máquina `Standard_D2ds_v4` (USD 71.17 por vCore).
@@ -191,14 +191,14 @@ Abaixo está o procedimento ilustrado para gerar a cópia física de segurança 
 ### Passo 1: Acessar o Menu Server no MySQL Workbench
 Com o MySQL Workbench aberto e conectado ao banco de dados hospedado no Azure, navegue até a barra de menu superior e clique na opção **Server**.
 
-![Passo 1 - Acessar Menu Server](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/1%20-%20SERVER.png?raw=true)
+![Passo 1 - Acessar Menu Server](./DUMP%20AZURE/1%20-%20SERVER.png)
 
 ---
 
 ### Passo 2: Selecionar a Opção Data Export
 No menu suspenso que se abre ao clicar em *Server*, selecione a opção **Data Export** para abrir o assistente de exportação do banco de dados.
 
-![Passo 2 - Selecionar Data Export](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/2%20-%20DATA%20EXPORT.png?raw=true)
+![Passo 2 - Selecionar Data Export](./DUMP%20AZURE/2%20-%20DATA%20EXPORT.png)
 
 ---
 
@@ -208,7 +208,7 @@ Na aba **Object Selection**:
 * Certifique-se de que todas as tabelas desejadas (`celular`, `cliente`, `eletronico`, `item_venda`, `notebook`, `venda`) estejam marcadas no painel direito.
 * No menu suspenso inferior, selecione a opção **Dump Structure and Data** para exportar tanto a DDL (estrutura) quanto a DML (dados).
 
-![Passo 3 - Dump Structure and Data](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/3%20-%20DUMP%20STRUCTURE.png?raw=true)
+![Passo 3 - Dump Structure and Data](./DUMP%20AZURE/3%20-%20DUMP%20STRUCTURE.png)
 
 ---
 
@@ -218,7 +218,7 @@ Na seção **Export Options**:
 * Defina o caminho do diretório e o nome do arquivo final de saída (ex: `eletronic_shop.sql`).
 * Clique no botão **Start Export** no canto inferior direito para iniciar o processo de geração do dump.
 
-![Passo 4 - Export File](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/4%20-%20EXPORT%20FILE.png?raw=true)
+![Passo 4 - Export File](./DUMP%20AZURE/4%20-%20EXPORT%20FILE.png)
 
 ---
 
@@ -227,7 +227,7 @@ Caso precise importar ou restaurar o banco de dados em uma nova instância:
 * Acesse **Server** > **Data Import**.
 * Na aba **Import from Disk**, selecione a opção **Import from Self-Contained File** (ou *Import from Dump Project Folder*) e indique o caminho onde o arquivo `.sql` está salvo.
 
-![Passo 5 - Data Import](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/5%20-%20DATA%20IMPORT.png?raw=true)
+![Passo 5 - Data Import](./DUMP%20AZURE/5%20-%20DATA%20IMPORT.png)
 
 ---
 
@@ -237,7 +237,7 @@ Na seção **Default Target Schema**:
 * No modal *Create Schema*, digite o nome do banco de dados destino (`eletronic_shop`).
 * Clique em **OK** para confirmar a criação do novo schema.
 
-![Passo 6 - Default Target Schema](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/6%20-%20DEFAULT%20TARGET.png?raw=true)
+![Passo 6 - Default Target Schema](./DUMP%20AZURE/6%20-%20DEFAULT%20TARGET.png)
 
 ---
 
@@ -246,21 +246,21 @@ Acesse a aba **Import Progress**:
 * Verifique o log inicial de preparação do schema.
 * Clique no botão **Start Import** localizado no canto inferior direito para executar a restauração de toda a estrutura e dos dados.
 
-![Passo 7 - Start Import](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/7%20-%20START%20IMPORT.png?raw=true)
+![Passo 7 - Start Import](./DUMP%20AZURE/7%20-%20START%20IMPORT.png)
 
 ---
 
 ### Passo 8: Conclusão e Confirmação da Importação
 Aguarde a barra de progresso atingir 100% e exibir o status **Import Completed**. O log indicará que a execução do script no servidor Azure foi concluída com sucesso (`Import of ... has finished`).
 
-![Passo 8 - Import Completo](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/8%20-%20IMPORT%20COMPLETO.png?raw=true)
+![Passo 8 - Import Completo](./DUMP%20AZURE/8%20-%20IMPORT%20COMPLETO.png)
 
 ---
 
 ### Passo 9: Verificação do Banco no Portal do Azure
 Por fim, acesse o Portal do Azure e navegue até a opção **Bancos de dados** do servidor `atividade4-bcd`. Confirme que o banco de dados `eletronic_shop` consta na lista de schemas do usuário com a codificação `utf8mb4`.
 
-![Passo 9 - Verificação no Azure](https://github.com/Cotinguiba/eletronic_shop_bcd/blob/develop/DUMP%20AZURE/9%20-%20Verifica%C3%A7%C3%A3o.png?raw=true)
+![Passo 9 - Verificação no Azure](./DUMP%20AZURE/9%20-%20Verifica%C3%A7%C3%A3o.png)
 
 ---
 
