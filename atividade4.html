@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletronics Shop - Documentação BD</title>
+    <style>
+        :root {
+            --primary: goldenrod;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #black;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: var(--primary);
+            color: black;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        h2 { color: var(--primary); }
+        ul { line-height: 1.6; }
+        .badge {
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eletronics Shop 📱💻</h1>
+            <p>Documentação do Banco de Dados Relacional</p>
+        </header>
+
+        <div class="card">
+            <h2>1. Domínio & Problema</h2>
+            <p>Mapeamento e persistência relacional para o sistema <strong>Eletronics Shop</strong>, substituindo a estrutura legada em memória RAM (<code>ArrayList</code> em Java).</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Normalização (1FN até 4FN)</h2>
+            <ul>
+                <li><span class="badge">1FN</span> Dados atômicos e sem colunas repetidas.</li>
+                <li><span class="badge">2FN</span> Chaves primárias bem definidas com dependência total.</li>
+                <li><span class="badge">3FN</span> Separação de especificações em tabelas filhas (<code>celular</code> e <code>notebook</code>).</li>
+                <li><span class="badge">4FN</span> Ausência de dependências multivaloradas independentes.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Estrutura do Banco</h2>
+            <p>Tabelas criadas: <code>eletronico</code>, <code>celular</code>, <code>notebook</code>, <code>cliente</code>, <code>venda</code> e <code>item_venda</code>.</p>
+        </div>
+    </div>
+</body>
+</html>
